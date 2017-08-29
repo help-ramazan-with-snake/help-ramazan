@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#gamescreen {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    left: 20%;
+    border: 5px dotted rgb(83, 142, 57);
+}
+
+.snake, .snake img {
+    z-index: 2;
+    opacity: 50%;
+}
+#LEV{
+    position: absolute;
+    z-index: 1;
+    top:4.5%;
+    left:79%;
+    opacity: 50%;
+}
+#window{
+    position: absolute;
+    z-index: 4;
+    border: 0px solid lightgray;
+    border-radius: 10px;
+    width: 400px;
+    height: 100px;
+    top:10%;
+    left: 50%;
+    text-align: center;
+}
+#losetext{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
