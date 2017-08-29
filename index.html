@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Help Ramazan</title>
-     <!-- Compiled and minified CSS -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <style>
-        *{
+        a{
+            color: aqua
+        }
+        a#logo-container{
+            color: aqua
+        }
+        nav ul a{
             color: #444
+        }
+        nav a{
+            color: #0ff
         }
 
     </style>
@@ -18,13 +29,16 @@
 <body>
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <a id="logo-container" href="#" class="brand-logo">Snake</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Help Ramazan to become a professional programmer</a></li>
+                <li><a href="/support">Help Ramazan to become a professional programmer</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
-                <li><a href="#">Navbar Link</a></li>
+                <li><a href="/support">Support him</a></li>
+                <li><a href="#">Snake</a></li>
+                <li><a href="#">Another upcoming projects</a></li>
+
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -35,5 +49,8 @@
         crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
 </body>
 </html>
