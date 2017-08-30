@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     position: absolute;
+    margin-top:20px;
     width: 60%;
     top: 10%;
     left: 20%;
