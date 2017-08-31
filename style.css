@@ -7,6 +7,7 @@
 }
 
 #gamescreen #gamestart {
+  z-index: 1000;
   margin-top: 40%;
   cursor: pointer;
   background: #777;
@@ -24,3 +25,55 @@
 #gamescreen #apple {
   position: absolute;
 }
+
+#up {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 150px solid rgba(255, 255, 255, 0);
+  border-left: 300px solid rgba(255, 255, 255, 0);
+  border-right: 300px solid rgba(255, 255, 255, 0);
+}
+
+#left {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 300px solid rgba(255, 255, 255, 0);
+  border-left: 150px solid rgba(255, 255, 255, 0);
+  border-bottom: 300px solid rgba(255, 255, 255, 0);
+}
+
+#down {
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 150px solid rgba(255, 255, 255, 0);
+  border-left: 300px solid rgba(255, 255, 255, 0);
+  border-right: 300px solid rgba(255, 255, 255, 0);
+}
+
+#right {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 300px solid rgba(255, 255, 255, 0);
+  border-bottom: 300px solid rgba(255, 255, 255, 0);
+  border-right: 150px solid rgba(255, 255, 255, 0);
+}
+ 
+
+
+  /*# sourceMappingURL=style.css.map */
