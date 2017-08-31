@@ -59,7 +59,8 @@ class Snake{
     }
 
     render(position){
-        console.log(position)
+
+        this.newOne = false
 
         this.positions.length === 1 ? this.positions = [position] : this.positions = [position, ...this.positions.slice(0, this.positions.length - 1)]
         
@@ -88,6 +89,7 @@ class Snake{
 
             this.length += 1
 
+            this.newOne = true
 
             this.appleRandom()
 
@@ -98,14 +100,30 @@ class Snake{
     broke(){
         return new Promise((resolve, reject) => {
             const int = setInterval(() => {
+
                 if(this.positions[0].x < 1 || this.positions[0].x > this.max || this.positions[0].y < 1 || this.positions[0].y > this.max){
                     this.over = true
                     clearInterval(int)
                     console.log('Stop')
                     resolve({broke: true})
                 }
-            }, 2500 / this.speed)
+
+                this.positions.slice(1, this.length).forEach(el => { 
+                    const now = this.positions[0]
+                    if(this.newOne === false && el.x === now.x && el.y === now.y){
+                        this.over = true
+                        clearInterval(int)
+                        console.log('Stop')
+                        resolve({broke: true})
+                    }
+                })
+
+            }, 5000 / this.speed)
         })
+    }
+
+    speed(val){
+        this.speed = val
     }
 }
 
@@ -131,7 +149,7 @@ $(document).ready(() => {
                 direction: 'down'
             })
 
-            snake.run('down', 50)
+            snake.run('down', 10)
 
             snake.broke().then(() => {
                 $('#gamescreen').find('center').append('<div id="gamestart">You lose. Click here to retry</div>')
@@ -139,8 +157,6 @@ $(document).ready(() => {
             })
 
             snake.appleRandom()
-
-            
 
         })
     }
