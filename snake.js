@@ -149,7 +149,7 @@ $(document).ready(() => {
                 direction: 'down'
             })
 
-            snake.run('down', 10)
+            snake.run('down', 30)
 
             snake.broke().then(() => {
                 $('#gamescreen').find('center').append('<div id="gamestart">You lose. Click here to retry</div>')
