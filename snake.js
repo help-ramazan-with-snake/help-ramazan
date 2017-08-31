@@ -47,6 +47,19 @@ class Snake{
             } else this.go(this.direction)
         }, 5000 / speed)
 
+        $('#up').on('click', () => {
+            this.direction = 'up'
+        })
+        $('#left').on('click', () => {
+            this.direction = 'right'
+        })
+        $('#down').on('click', () => {
+            this.direction = 'down'
+        })
+        $('#right').on('click', () => {
+            this.direction = 'left'
+        })
+
 
         $(document).keydown(e => {
             switch(e.which){
@@ -149,7 +162,7 @@ $(document).ready(() => {
                 direction: 'down'
             })
 
-            snake.run('down', 30)
+            snake.run('down', 10)
 
             snake.broke().then(() => {
                 $('#gamescreen').find('center').append('<div id="gamestart">You lose. Click here to retry</div>')
